@@ -983,4 +983,290 @@ for(let a of genVal1){
     console.log(a)
 }
 
-//4.date
+
+
+
+
+
+
+
+
+
+
+// Data Structure
+
+//Spread Operator
+
+
+//array,object
+
+//[...], {...}
+
+//we can two array and two object merge value
+//array sperad operator
+
+// let array1=[1,2,3,4]
+let array2=[5,6,7,8]
+let newArr=[...array1,...array2,9,10]
+console.log(newArr)
+
+//object spread operator
+
+let obj1={
+    name1:"a",
+    role:"developer",
+    salary:"10000000"
+}
+
+let obj2={
+    name2:"b",
+    role:"manager",
+    salary:"20000000"
+}
+
+let newObj={...obj1,...obj2}
+console.log(newObj)
+
+
+
+//rest operator
+
+//function
+
+//(...)
+
+// we can store multiple parameter value in one variable
+
+function adding(a,b,c,d,e,f,g,h){
+    console.log(a)
+    let remainVal=d 
+    console.log(remainVal)
+    console.log(a+b+c+remainVal[0])
+
+}
+adding(1,2,3,4,5,6,7,8)
+
+//destructure
+
+let arr1=[1,2,3,4]
+
+// let a1=arr1[0]
+let a2=arr1[1]
+let a3=arr1[2]
+let a4=arr1[3]
+console.log(a2+a3+a4)
+
+
+//destructure array
+
+let [b1,b2,b3,b4]=arr1
+
+
+console.log(b1+b2+b3+b4)
+
+
+//object destructure
+
+let object1={
+    name:"john",
+    role:"developer",
+
+}
+
+let c1=object1.name1
+let c2=object1.role
+console.log(c1,c2)
+
+
+
+//destructure of object
+
+
+let {name,role}=object1
+console.log(name,role)
+
+
+
+//nested array
+
+let nested=[1,2,3,[4,5,6,[7,8]]]
+let d1=nested[0]
+let d2=nested[3][0]
+let d3=nested[3][1]
+let d4=nested[3][2][0]
+let d5=nested[3][2][1]
+console.log(d1,d2,d3,d4,d5)
+
+//destructure of nested array
+
+let [e1,e2,e3,[e4,e5,e6,[e7,e8]]]=nested
+console.log(e1,e4,e7,e8)
+
+
+
+
+//array advanced concept (Es6)
+
+//Array manipulate method
+
+
+
+//if you are use adding, you can add multiple value in array
+
+
+//if you are using remove method, you can remove only one value in array
+
+
+
+let normalArr=[1,2,3,4,5,6,"hello",true,undefined,null,[1,2,3],{k:1}]
+console.log(normalArr)
+console.log(normalArr[0]);
+
+console.log(normalArr[3]);
+
+console.log(normalArr[0]);
+
+console.log(normalArr[normalArr.length-1]);
+
+
+//homogenious array - same type of value
+
+//heterogenious array - different type of value
+
+//flexible array - u can store any type of value in array
+
+// let new1=[1,2,3,4]
+
+//push() - u can add last side of array value
+
+new1.push(5,6,7,8)
+console.log(new1)
+
+
+//push() - u can add last side of array value
+
+let new1=[1,2,3,4]
+
+new1.push(5,6,7,8)
+console.log(new1)
+
+//pop() - u can remove last side of array value
+
+new1.pop()
+
+
+//shift() - u can first side of array value
+
+new1.shift()
+console.log(new1)
+
+//unshift() - u can add first side of array value
+
+new1.unshift(0)
+console.log(new1)
+
+//splice() - u can add and remove value in array
+
+//startingIndex, removeCount, AddingValue
+
+let new2=[1,2,3,40,50,60,70]
+
+new2.splice(3,2,100,200)
+console.log(new2);
+
+
+
+let example=[1,2,3,4] //1,2,3,4,"four","five"
+
+example.splice(3,1,"four","five")
+console.log(example);
+
+
+//merge method - u can merge two array value in one array
+
+//concat
+
+let merge1=[1,2,3,4]
+let merge2=[5,6,7,8]
+
+let mergeArr=merge1.concat(merge2)
+console.log(merge1);
+console.log(mergeArr);
+
+//slice()
+
+let arr14=[1,2,3,"a","b","c",4,5,6]
+
+let sliceVal=arr14.slice(3,6) //starting index, ending index(not include)
+console.log(sliceVal);
+
+
+//flat()
+
+let nested1=[1,2,3,[4,5,6,[7,8,[9,10,[11]]]]]
+let nestedVal=nested1.flat()
+console.log(nested1.flat(4));
+console.log(nested);
+
+//fill()
+
+let arr15=[1,2,3,4] //1,2,3,"four"
+
+arr15.fill("four",1,3) //value, starting index, ending index(not include)
+console.log(arr15);
+
+
+//includes()
+
+let arr16=[1,2,3,4,5]
+let includesVal=arr16.includes(3)
+
+console.log(includesVal);
+
+
+
+
+//sort()
+
+let arr17=[3,2,1,4,5]
+let sortVal=arr17.sort()
+
+console.log(sortVal);
+
+
+//indexOf()
+
+let random1=[1,2,3,4,3,2,1]
+let indexOfVal=random1.indexOf(3,3) //value, starting index
+
+console.log(indexOfVal);wz
+
+
+
+
+
+//lastIndex()
+
+let lastIndexVal=random1.lastIndexOf(3)
+
+console.log(lastIndexVal);
+
+//reverse()
+
+let arr18=[1,2,3,4,5]
+let reverseVal=arr18.reverse()
+
+console.log(reverseVal);
+
+
+
+
+
+
+
+
+
+
+
+
+
