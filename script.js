@@ -1261,6 +1261,332 @@ console.log(reverseVal);
 
 
 
+//Array higher order method
+
+function one1(){
+    console.log("jhfshhsd");
+    
+}
+function two2(){
+    console.log("23456789765432");
+    
+}
+one1(two2())
+
+
+let games=["cricket","football","hockey","badminton","golf"]
+
+//1.forEach()
+let newForEach=games.forEach((currentElement,index,TotalArray)=>{
+    return("forEcah :",currentElement)
+    // console.log(currentElement);
+    // console.log(index);
+    // console.log(TotalArray);
+    
+    
+    
+})
+console.log(newForEach)
+
+//2.map()
+
+let newMap=games.map((c,i,t)=>{
+    console.log(c,i,t);
+})
+
+
+//3.filter()
+
+let employyee=[
+    {name:"john", role:"developer", salary:1000000},
+    {name:"peter", role:"manager", salary:2000000},
+    {name:"michael", role:"developer", salary:1500000},
+    {name:"susan", role:"designer", salary:1200000},
+    {name:"lisa", role:"developer", salary:1800000}
+]
+let employeeSalary=employee.filter((c,i,t)=>{
+    return c.salary>2000000
+})
+console.log(employeeSalary);
+
+
+//4.find()
+
+let employeeHighestSalary=employee.find((c,i,t)=>{
+    return c.salary>2000000
+})
+
+
+
+//5.reduce()
+
+employee = [
+  { name1: "a", salary: 100000 },
+  { name1: "b", salary: 200000 },
+  { name1: "c", salary: 300000 },
+  { name1: "d", salary: 400000 },
+  { name1: "e", salary: 500000 },
+];
+
+let TotalSalary = employee.reduce((acc,c,i,t)=>{
+   return acc + c.salary
+
+   //  0 + 1 = 1
+   //  1 + 2 = 3
+   //  3 + 3 = 6
+   //  6 + 4 = 10
+   //  10 + 5 = 15
+
+   // return 15 
+
+},0) // 1 // 3 // 6 // 10 // 15
+
+console.log(TotalSalary);
+
+
+// 6. some()  - OR
+
+let someVal = [1,2,3,4]
+
+let some1 = someVal.some((c,i,t)=>{
+
+   return  c%2==0
+
+   // 1%2==0 false
+   // 2%2==0 true
+   // 3%2==0 false
+   // 4%2==0 true
+
+   // false || true || false || true = true
+
+})
+
+console.log(some1);
+
+
+// 7. every() - AND
+
+let everyArr = [2,2,2,2]
+
+let everyVal = everyArr.every((c,i,t)=>{
+   return c%2==0
+})
+
+console.log(everyVal);
+
+
+
+// 8. sort()
+
+let randomArr = [2,1,356,4,2345,5,60000,8]
+
+// 1 2 4 356 5 2345 8 60000
+
+// 1 2 4 5 356 8 2345 60000
+
+// 1 2 4 5 8 356 2345 60000
+
+let sortVal1 = randomArr.sort()
+
+console.log(sortVal1);
+
+
+let higherSort = randomArr.sort((a,b)=>{
+   return b-a
+})
+
+console.log(higherSort);
+
+
+// covertion method  arr to str
+
+
+// toString()
+
+let raArrVal = [1,2,3,4]
+
+let strArr = raArrVal.toString()
+
+console.log((strArr));
+
+
+// join()
+
+let joinArr = raArrVal.join(4)
+
+console.log(joinArr);
+
+
+let abc1 = [1,2,3,4] // 1,2,"three",4
+
+// let abc = [1, 2, 3, 4];
+
+// abc.splice(2, 1, "three");
+
+// console.log(abc);
+
+
+console.clear();
+
+
+// String Methods 
+
+// charAt(), in --> val
+
+let str = "javascript"
+
+let charAtVal = str.charAt(9)
+
+console.log(charAtVal);
+
+
+
+
+
+
+// charCodeAt(), in --> asscii value
+
+let charCodeAtVal = str.charCodeAt(1)
+
+console.log(charCodeAtVal);
+
+
+
+
+
+// length, 
+
+let lengthVal = str.length
+
+console.log(lengthVal);
+
+
+str = "javaScript";
+
+// slice(),
+
+let sliceVal1 = str.slice(4,10) // Si ,Ei+1
+
+console.log(sliceVal1);
+
+
+
+// toUpperCase(), 
+
+let upper = str.toUpperCase()
+
+console.log(upper);
+
+console.log(str);
+
+// toLowerCase(), 
+
+let lower = str.toLowerCase()
+
+console.log(lower);
+
+
+// trim(), - 
+
+let str11 = " hello "
+
+console.log(str11);
+
+
+let trimVal = str11.trim()
+
+console.log(trimVal);
+
+// trimStart()
+
+let trimStart = str11.trimStart()
+
+console.log(trimStart);
+
+
+// trimEnd()
+
+let trimEnd = str11.trimEnd()
+
+console.log(trimEnd);
+
+
+// includes(),
+
+let str22 = "hello world"
+
+let inc = str22.includes("H")
+
+console.log(inc);
+
+
+
+
+// split(), 
+
+let str33 = "iron-man"
+
+let splitVal = str33.split("-")
+
+console.log(splitVal);
+
+
+
+
+// indexOf(), 
+
+let str44 = "hello world"
+
+let ind1 = str44.indexOf("l",4) // value,Fi
+
+console.log(ind1);
+
+
+// lastIndexOf()
+
+let lastInd = str44.lastIndexOf("l",8)
+
+console.log(lastInd);
+
+
+// replace(), 
+
+let str5 = "pythonDeveloper"
+
+let replaceVal = str5.replace("python","javascript") // change , changed
+
+console.log(replaceVal);
+
+
+// startsWith(), 
+
+let str66 = "hello"
+
+let start1 = str66.startsWith("h")
+
+console.log(start1);
+
+
+
+// endsWith()
+
+let last1 = str66.endsWith("o")
+
+console.log(last1);
+
+
+// repeat
+
+let str7 = "welcome"
+
+let repeatVal = str7.repeat(111)
+
+console.log(repeatVal);
+
+
+
+
+
 
 
 
