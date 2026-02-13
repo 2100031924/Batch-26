@@ -1583,6 +1583,296 @@ let repeatVal = str7.repeat(111)
 
 console.log(repeatVal);
 
+console.log(clear)
+
+
+
+
+//Date 
+
+let date1= new Date()
+console.log(date1);
+
+
+//get()
+
+//year
+
+let year1=date1.getFullYear()
+
+console.log(year1);
+
+
+//Date
+
+let date2=date1.getDate()
+console.log(date2);
+
+//month
+
+let month=date1.getMonth()
+console.log(month);
+
+
+//day 
+
+let day=date1.getDay()
+console.log(day);
+
+//hours
+
+let hours=date1.getHours()
+console.log(hours);
+
+//minutes
+
+let minutes=date1.getMinutes()
+console.log(minutes);
+
+//secounds
+
+let secounds=date1.getSeconds()
+console.log(secounds);
+
+//local date
+
+//time
+
+let time=date1.toLocaleTimeString()
+console.log(time)
+
+//date
+
+let date3=date1.toLocaleDateString()
+console.log(date3);
+
+//time and date
+
+let all=date1.toLocaleString()
+console.log(all);
+
+
+
+//set()
+
+let date11=new Date()
+console.log(date11);
+
+//year
+
+let year2=date11.setFullYear(2025)
+console.log(year2);
+
+
+//month
+
+date11.setMonth(9) 
+console.log(date11);
+
+//Date
+
+date11.setDate(25)
+console.log(date11);
+
+//time
+
+date11.setTime(5)
+console.log(date11);
+
+//minutes
+
+date11.setMinutes(55)
+console.log(date11);
+
+//seconds
+
+date11.setSeconds(1000)
+console.log(date11);
+
+
+//birthday day finder
+
+// let year5=2004
+// let month5=1
+// let date5=29
+
+let year5=prompt("Enter your dob year")
+let month5=prompt("Enter your dob month in number")
+let date5=prompt("Enter your dob date")
+
+// let birthDay=new Date(year5,month5-1,date5)
+// console.log(birthDay);
+let rawdate=new Date()
+rawdate.setFullYear(year5)
+rawdate.setMonth(month5-1)
+rawdate.setDate(date5)
+
+console.log(rawdate);
+
+let day5=rawdate.getDay()
+console.log(day5);
+
+let dayraw=["sunday","monday","tuesday","wednesday","thursday","friday","saturday"]
+
+console.log(dayraw[day5]);
+
+//asynchronous programming
+
+
+//setTimeOut()
+
+//syntax
+setTimeout(()=>{
+    console.log("hello");
+    
+},50000)
+
+
+
+//setTimeInterval()
+
+setTimeInterval(()=>{
+    console.log("hello");
+    
+},50000)
+
+
+function one(){
+    console.log("One");
+    
+}
+
+function two(){
+    console.log("Two");
+    
+}
+
+function three(){
+    console.log("Three");
+    
+}
+
+one()
+setTimeout(two,2000)
+three()
+
+
+
+//setIntervalTime()
+
+
+// let time2=document.querySelector(".time")
+setInterval(()=>{
+    let time=new Date()
+
+    let time1=time.toLocaleTimeString()
+    time2.innerHTML=time1
+    console.log(time1);
+    
+},1000)
+
+
+//promise API
+
+//resolve Data - successful data  then()
+
+//reject data - Error data     catch()
+
+//bending data - coming data from server  finally()
+
+//fetch()
+
+//api link inside the data store you want means u can use fetch keyword
+
+//fetch("https://jsonplaceholder.typicode.com/todos/1")
+
+let api="https://jsonplaceholder.typicode.com/todos/1"
+
+fetch(api)
+.then((response)=>{
+    return response.json()
+})
+.then((data)=>{
+    console.log(data);
+})
+
+return data.json()
+
+.catch((error)=>{
+    // console.log(error.message);
+    console.warn(error.message);
+    
+    
+})
+.finally((r)=>{
+    console.log(r);
+    
+})
+
+.then((data77)=>{
+    data77.forEach((c,i,t)=>{
+        console.log(c.title);
+        
+    })
+})
+
+
+
+
+
+// console.log("rfgefhjkrfjhgdsfghjkhgfdefcgvbnbvcxdfghbs");
+
+// console.clear()
+
+
+// how to find leap year
+
+let year=2028
+
+if(year%4==0 && year%100!=0 || year%400==0){
+    console.log(`${year} is leap year`);
+}else{
+    console.log(`${year} is not leap year`);
+}
+
+if(year%4==0){
+    if(year%100==0){
+        if(year%400==0){
+            console.log(`${year} is leap year`);
+        }else{
+            console.log(`${year} is not leap year`);
+        }
+    }else{
+        console.log(`${year} is leap year`);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
