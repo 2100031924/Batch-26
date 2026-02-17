@@ -1849,6 +1849,208 @@ if(year%4==0){
 
 
 
+//DOM- Document Object Model
+
+//selecting method
+
+//getElementByTagName()
+
+let tag1=document.getElementsByTagName("h1")
+
+console.log(tag1);
+
+//class
+//getElementByClassnames
+
+let class1=document.getElementsByClassName("one")
+
+console.log(class1);
+
+//id
+//getElementIDName
+
+let id1=document.getElementById("two")
+console.log(id1);
+
+//querySelector
+
+//tag
+
+let h2=document.querySelector("h2")
+
+console.log(h2);
+
+//class
+
+let first=document.querySelector(".first")
+
+console.log(first);
+
+//id
+
+let second=document.querySelector("#second")
+
+console.log(second);
+
+//querySelectorAll()
+
+let h5=document.querySelectorAll("h5")
+
+console.log(h5);
+
+
+
+
+
+
+
+
+//Traversing Method
+
+//parent element
+
+let child2=document.querySelector(".child2")
+
+console.log(child2);//parent element
+
+
+//child element
+
+let parent=document.querySelector(".parent")
+
+console.log(parent.children);//children method
+
+console.log(parent.firstElementChild);//firstElementChild
+
+console.log(parent.lastElementChild);//lastElementChild
+
+console.log(parent.firstChild);//firstChild
+
+console.log(parent.lastChild);//lastChild
+
+
+
+
+
+//sibling element
+
+let child3=document.querySelector(".child3")
+console.log(child3.nextElementSibling);//nextElementSibling
+
+console.log(child3.previousElementSibling);//previousElementSibling
+
+
+
+//Manipulating Method
+
+//input inside value if want to access=(value)
+let input=document.querySelector("input")
+
+input.value="hello"
+
+//expect input tag inside valueif u want to access means = ( innerText, innerHTML, innerContent)
+
+let h1=document.querySelector("h1")
+
+h1.innerText="welcome"
+
+let hello=document.querySelector("hello")
+
+hello.textContent="hello"
+
+
+let hi=document.querySelector("#hi")
+
+hi.innerHTML='<h1>hello</h1>'
+
+
+//Even handler
+
+function clk(){
+    let aa=document.querySelector(".aa")
+    aa.innerText="good afternoon"
+}
+
+function clk2(){
+    let cc=document.querySelector(".cc")
+
+    cc.textContent="hello guys"
+}
+
+
+
+
+//Even listener
+
+let bb=document.querySelector(".bb")
+let btn=document.querySelector(".btn")
+
+btn.addEventListener("click",()=>{
+    bb.innerText="good Evening"
+})
+
+
+//Append()
+
+//one tag inside another tag if want given
+
+//createELement()
+
+//create new HTML tag in js
+
+//style.property="value", style.color="blue"
+
+
+//css
+
+
+
+//setAttributes
+
+//bb.setAttributes("class","one")
+
+//eval("10"+"10")
+
+//number
+
+
+
+//To Do Application
+
+//selecting
+
+let input=document.querySelector("input")
+
+let button=document.querySelector("button")
+
+let ol=document.querySelector("ol")
+
+button.addEventListener("click",()=>{
+    let inputValue=input.value
+
+    //create element
+
+    // ol.innerText=inputValue
+
+    let li=document.createElement("li")
+
+    li.innerText=inputValue
+    li.style.fontSize="50px"
+    li.setAttribute("class","active")
+
+    //append
+
+    ol.append(li)
+    li.addEventListener("click",()=>{
+        li.remove()
+    })
+    input.value=""
+    
+})
+
+
+
+
 
 
 
